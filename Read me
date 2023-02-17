@@ -1,0 +1,19 @@
+the Boids algorithm is a simple algorithm used to simulate the movement of a flock of birds. It's called "Boids" because it's based on the behavior of individual "bird-like" objects, or "Boids".
+
+The Boids algorithm is based on three simple rules:
+
+Separation: Boids try to keep a safe distance from other nearby Boids to avoid collisions.
+
+Alignment: Boids try to align their velocity with that of nearby Boids to maintain cohesion.
+
+Cohesion: Boids try to move towards the center of mass of nearby Boids to maintain group cohesion.
+
+The Boids algorithm consists of a set of Boids, each of which has a position, velocity, and acceleration. Each Boid applies the three rules to its nearby neighbors and updates its acceleration accordingly. The Boids then update their velocity and position based on their acceleration.
+
+In the code I provided, there are two classes: Boid and Flock. The Boid class represents a single Boid object, and contains methods for updating its position, velocity, and acceleration, as well as methods for applying the three rules. The Flock class represents a collection of Boid objects, and contains a list of Boids and methods for updating the positions of all the Boids in the flock.
+
+The Boid class has several methods for applying the three rules. The separate, align, and cohesion methods implement the Separation, Alignment, and Cohesion rules, respectively. The seek method is used to implement the "chasing" behavior of the Boids, which causes them to move towards a target point.
+
+The Flock class contains a list of Boid objects, and the update method iterates over all the Boids in the flock and applies the three rules to update their positions, velocities, and accelerations.
+
+The code also uses the numpy and matplotlib libraries to perform vector operations and visualize the simulation, respectively.
